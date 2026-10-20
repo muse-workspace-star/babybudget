@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Cost Calculator — First-Year Baby Cost Estimator | BabyBudget</title>
+<meta name="description" content="Free baby cost calculator: estimate your baby's first-year cost across gear, feeding, diapers and childcare — or allocate a fixed baby budget across categories.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="BabyBudget home">
+      <svg viewBox="0 0 64 48" aria-hidden="true">
+        <circle cx="32" cy="24" r="17" fill="none" stroke="#6E7F5C" stroke-width="4.5"/>
+        <circle cx="32" cy="24" r="6" fill="#9AA88B"/>
+        <path d="M32 1 l4 5 -4 5 -4 -5 z" fill="#6E7F5C"/>
+      </svg>
+      <span class="brand-name">BabyBudget</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="index.html" class="active">Cost Calculator</a>
+      <a href="../baby-budget-breakdown/index.html">Budget Breakdown</a>
+      <a href="../average-baby-cost-2026/index.html">Average Cost</a>
+      <a href="../about/index.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:40px">
+    <div class="wrap-narrow">
+      <h1 style="text-align:center">Baby Cost Calculator</h1>
+      <p class="lede" style="text-align:center;color:var(--muted);max-width:640px;margin:0 auto 28px">
+        Two ways to plan: estimate what your baby's first year will cost — or start from a fixed budget and see how to split it. All figures are planning estimates, not quotes.
+      </p>
+
+      <div class="calc-shell">
+        <div class="tabs" role="tablist">
+          <button class="tab-btn active" data-tab="panel-estimate" role="tab">🍼 Estimate first-year cost</button>
+          <button class="tab-btn" data-tab="panel-allocate" role="tab">📊 Allocate my budget</button>
+        </div>
+
+        <!-- MODE A -->
+        <div class="tab-panel active" id="panel-estimate" role="tabpanel">
+          <div class="field">
+            <span class="label">One-time gear &amp; nursery setup</span>
+            <div class="option-grid three">
+              <div class="option-card">
+                <input type="radio" name="gear" id="g-budget" value="budget">
+                <label for="g-budget"><strong>Budget</strong><span class="hint">~$1,200 · secondhand &amp; basics</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="gear" id="g-mid" value="mid" checked>
+                <label for="g-mid"><strong>Mid-range</strong><span class="hint">~$2,800 · new essentials</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="gear" id="g-premium" value="premium">
+                <label for="g-premium"><strong>Premium</strong><span class="hint">~$6,000 · top brands</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Feeding</span>
+            <div class="option-grid five">
+              <div class="option-card">
+                <input type="radio" name="feed" id="f-breast" value="breast">
+                <label for="f-breast"><strong>Breastmilk</strong><span class="hint">~$30/mo supplies</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="feed" id="f-combo" value="combo" checked>
+                <label for="f-combo"><strong>Combo</strong><span class="hint">~$100/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="feed" id="f-fstore" value="formula_store">
+                <label for="f-fstore"><strong>Formula · store</strong><span class="hint">~$75/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="feed" id="f-fbrand" value="formula_brand">
+                <label for="f-fbrand"><strong>Formula · brand</strong><span class="hint">~$150/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="feed" id="f-fprem" value="formula_prem">
+                <label for="f-fprem"><strong>Formula · premium</strong><span class="hint">~$250/mo</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Diapers</span>
+            <div class="option-grid">
+              <div class="option-card">
+                <input type="radio" name="diaper" id="d-cloth" value="cloth">
+                <label for="d-cloth"><strong>Cloth</strong><span class="hint">~$45/mo amortized</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="diaper" id="d-store" value="store">
+                <label for="d-store"><strong>Store brand</strong><span class="hint">~$60/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="diaper" id="d-brand" value="brand" checked>
+                <label for="d-brand"><strong>Name brand</strong><span class="hint">~$90/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="diaper" id="d-premium" value="premium">
+                <label for="d-premium"><strong>Premium / eco</strong><span class="hint">~$120/mo</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label">Childcare</span>
+            <div class="option-grid">
+              <div class="option-card">
+                <input type="radio" name="care" id="c-none" value="none">
+                <label for="c-none"><strong>Family / at home</strong><span class="hint">$0</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="care" id="c-home" value="home">
+                <label for="c-home"><strong>Home-based</strong><span class="hint">~$970/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="care" id="c-center" value="center" checked>
+                <label for="c-center"><strong>Daycare center</strong><span class="hint">~$1,230/mo</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="care" id="c-nanny" value="nanny">
+                <label for="c-nanny"><strong>Nanny</strong><span class="hint">~$2,700/mo</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="caremonths-slider">Months of paid childcare in year one</label>
+            <div class="slider-row">
+              <input type="range" id="caremonths-slider" min="0" max="12" step="1" value="9" aria-label="Childcare months slider">
+              <input type="number" id="caremonths-num" min="0" max="12" value="9" aria-label="Childcare months">
+            </div>
+          </div>
+
+          <div class="results">
+            <div class="total-line">
+              <div class="label">Estimated first-year baby cost</div>
+              <div class="total" id="a-total">$16,450</div>
+              <div class="sub" id="a-permonth"></div>
+            </div>
+            <div id="a-breakdown"></div>
+          </div>
+        </div>
+
+        <!-- MODE B -->
+        <div class="tab-panel" id="panel-allocate" role="tabpanel">
+          <div class="field">
+            <label for="b-budget">Your first-year budget</label>
+            <div class="slider-row">
+              <input type="number" id="b-budget" min="1000" max="200000" step="1000" value="20000" aria-label="First-year budget" style="width:160px">
+              <span>
+                <button class="btn ghost" data-budget="15000" style="padding:8px 16px;font-size:0.9rem">$15k</button>
+                <button class="btn ghost" data-budget="20000" style="padding:8px 16px;font-size:0.9rem">$20k</button>
+                <button class="btn ghost" data-budget="30000" style="padding:8px 16px;font-size:0.9rem">$30k</button>
+              </span>
+            </div>
+          </div>
+          <div class="results" style="border-top:none;padding-top:0;margin-top:10px">
+            <div class="total-line">
+              <div class="label">Budget allocation</div>
+              <div class="total" id="b-total">$20,000</div>
+              <div class="sub">Standard first-year split — adjust to your priorities</div>
+            </div>
+            <div id="b-breakdown"></div>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Estimate, not a quote.</strong> Results are built from 2026 US averages (see our <a href="../methodology/index.html">methodology</a>). Real costs vary widely by city, childcare market, and brand choices. Get local childcare quotes early — waitlists run 6–18 months.
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top:36px">
+        <h2>How the estimate works</h2>
+        <p>A baby's first year splits into three very different kinds of spending: <strong>one-time gear</strong> (crib, stroller, car seat), <strong>monthly consumables</strong> (feeding + diapers × 12), and <strong>childcare</strong> — the single biggest line for most working families. We price each from 2026 US averages, then show where every dollar goes. Dive deeper in our <a href="../baby-budget-breakdown/index.html">budget breakdown guide</a> and <a href="../average-baby-cost-2026/index.html">2026 average cost guide</a>.</p>
+        <h2>Three levers that move the number most</h2>
+        <ul>
+          <li><strong>Childcare type.</strong> Family care ($0) vs. a nanny (~$2,700/mo) is a ~$32,000 swing — bigger than every other choice combined.</li>
+          <li><strong>Feeding.</strong> Breastmilk (~$30/mo in supplies) vs. premium formula (~$250/mo) differs by ~$2,600 over the year.</li>
+          <li><strong>Gear tier.</strong> Secondhand basics (~$1,200) vs. premium brands (~$6,000). Babies outgrow gear fast — this is the easiest place to save.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>BabyBudget</h4>
+      <p style="font-size:0.94rem">Free baby cost calculator and first-year budget guides. All figures are estimates for planning — not quotes.</p>
+    </div>
+    <div>
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="index.html">Baby Cost Calculator</a></li>
+        <li><a href="../baby-budget-breakdown/index.html">Budget Breakdown Guide</a></li>
+        <li><a href="../average-baby-cost-2026/index.html">2026 Average Cost Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="../about/index.html">About Us</a></li>
+        <li><a href="../methodology/index.html">Methodology &amp; Sources</a></li>
+      </ul>
+    </div>
+    <div class="bottom">© 2026 BabyBudget. Estimates only — see <a href="../methodology/index.html">methodology</a>.</div>
+  </div>
+</footer>
+
+<script src="../assets/js/calculators.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0cc9b3c438344fda849d145891dc3f68"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

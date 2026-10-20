@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muse-workspace-star.github.io/babybudget/sitemap.xml
